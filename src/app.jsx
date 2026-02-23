@@ -1,3 +1,6 @@
+import twitter from "./assets/icons8-twitter";
+import tumblr from "./assets/icons8-tumblr";
+
 export default function App() {
     return (
         <>
@@ -32,16 +35,13 @@ export default function App() {
                     <div className="flex gap-2.5 w-fit">
                         <a href="twitter.com/intent/tweet" id="tweet-quote">
                             <img
-                                src="src\assets\icons8-twitter.svg"
+                                src={twitter}
                                 alt="twitter-logo"
                                 className="scale-120"
                             />
                         </a>
                         <a href="">
-                            <img
-                                src="src\assets\icons8-tumblr.svg"
-                                alt="tumblr-logo"
-                            />
+                            <img src={tumblr} alt="tumblr-logo" />
                         </a>
                     </div>
                 </div>
