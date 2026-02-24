@@ -1,16 +1,86 @@
-# React + Vite
+# Random Quote Machine
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a solution to the Random Quote Machine challenge on freeCodeCamp.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of contents
 
-## React Compiler
+- [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+- [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+- [Author](#author)
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+---
 
-## Expanding the ESLint configuration
+## Overview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### The challenge
+
+Users should be able to:
+
+- View a random quote on page load
+- Generate a new random quote when clicking the **"New Quote"** button
+- Share the current quote on X (Twitter)
+- Share the current quote on Tumblr
+- View a responsive layout across different screen sizes
+
+---
+
+### Screenshot
+
+![](./preview.png)
+
+---
+
+### Links
+
+- Solution URL: [Github repo](https://github.com/S4V10N/random-quote-machine.git)
+- Live Site URL: [Live preview](https://random-quote-machine-three-delta.vercel.app/)
+
+---
+
+## My process
+
+### Built with
+
+- React
+- Tailwind CSS
+- Semantic HTML5 markup
+- Vite
+
+---
+
+### What I learned
+
+This project helped me strengthen my understanding of:
+
+- React state management using `useState`
+- Handling dynamic data rendering
+- Encoding URLs for social media sharing
+- Preventing repeated quotes consecutively
+- Building responsive layouts with Tailwind
+- Implementing external share links (X & Tumblr)
+
+Below is a key snippet used to generate and encode shareable quote text:
+
+```js
+const shareText = `"${quote.text}" — ${quote.author}`;
+const encodedText = encodeURIComponent(shareText);
+
+const tweetUrl = `https://x.com/intent/tweet?text=${encodedText}`;
+
+const tumblrUrl = `https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes&caption=${encodeURIComponent(
+    quote.author,
+)}&content=${encodeURIComponent(quote.text)}`;
+```
+
+## Author
+
+- Website [S4](https://savion.dev)
+- Frontend Mentor [S4V10N](https://www.frontendmentor.io/profile/S4V10N)
+- Twitter [Dev Savion](https://x.com/dev_savion?s=21)
