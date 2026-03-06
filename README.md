@@ -65,7 +65,7 @@ This project helped me strengthen my understanding of:
 - Building responsive layouts with Tailwind
 - Implementing external share links (X & Tumblr)
 
-Below is a key snippet used to generate and encode shareable quote text:
+Below is a code snippet used to generate and encode shareable quote text:
 
 ```js
 const shareText = `"${quote.text}" — ${quote.author}`;
