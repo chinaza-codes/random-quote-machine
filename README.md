@@ -27,7 +27,6 @@ Users should be able to:
 - Generate a new random quote when clicking the **"New Quote"** button
 - Share the current quote on X (Twitter)
 - Share the current quote on Tumblr
-- View a responsive layout across different screen sizes
 
 ---
 
