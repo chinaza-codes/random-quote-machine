@@ -50,7 +50,7 @@ Users should be able to:
 - React
 - Tailwind CSS
 - Semantic HTML5 markup
-- Vite
+
 
 ---
 
